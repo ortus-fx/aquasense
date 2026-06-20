@@ -1,4 +1,4 @@
-# PondIQ — Fish Feeding Advisor
+# Aquasense — Fish Feeding Advisor
 
 A machine-learning powered feeding advisor for fish farmers. Enter 6 water quality readings and instantly receive a science-based recommendation: **Feed Now**, **Reduce Feed**, or **Halt Feeding**.
 
@@ -7,12 +7,13 @@ Built with XGBoost (FastAPI backend) + Streamlit (responsive frontend).
 ## Project Structure
 
 ```
-PondIQ-main/
-├── pondiq_api.py              # FastAPI server wrapping the XGBoost model
-├── streamlit_app.py           # Streamlit frontend (web + mobile responsive)
-├── pyproject.toml             # Python project config & dependencies
-├── requirements_api.txt       # API dependencies (pip-compatible)
-├── requirements_streamlit.txt # Streamlit dependencies
+aquasense/
+├── app/
+│   ├── pondiq_api.py              # FastAPI server wrapping the XGBoost model
+│   ├── streamlit_app.py           # Streamlit frontend (web + mobile responsive)
+│   ├── pyproject.toml             # Python project config & dependencies
+│   ├── requirements_api.txt       # API dependencies (pip-compatible)
+│   └── requirements_streamlit.txt # Streamlit dependencies
 ├── src/
 │   └── models/
 │       ├── feed_classifier.pkl  # Trained XGBoost model
@@ -38,7 +39,6 @@ brew install libomp
 ### 1. Install dependencies
 
 ```bash
-cd PondIQ-main
 uv sync
 ```
 
