@@ -65,8 +65,6 @@ print(f"\nTrain: {len(X_train):,}  |  Test: {len(X_test):,}")
 
 
 # SMOTE (training set only)
-# Chawla et al. (2002): oversample minority classes on training
-# data only — test set stays at original distribution.
 # =============================================================
 
 smote = SMOTE(random_state=42)
@@ -76,8 +74,6 @@ print(f"After SMOTE: {len(X_bal):,} training rows  (was {len(X_train):,})")
 
 
 # TRAIN
-# XGBoost chosen: highest F1 Macro (0.9941) in model comparison.
-# Parameters carried over from 04_modeling.ipynb exactly.
 # =============================================================
 
 model = XGBClassifier(
